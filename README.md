@@ -4,18 +4,18 @@ a easy restful framework
 # install
 ```go
 func main() {
-	r := goish.New()
+	r := easyrest.New()
 	v1 := r.Group("/api/v1")
 	{
-		v1.GET("/users/:id([0-9]+)/:name([a-z]+)", func(c *goish.Context) {
-			c.JSON(http.StatusOK, goish.H{
+		v1.GET("/users/:id([0-9]+)/:name([a-z]+)", func(c *easyrest.Context) {
+			c.JSON(http.StatusOK, easyrest.H{
 				"id":   c.Query("id"),
 				"name": c.Query("name"),
 			})
 		})
 
-		v1.POST("/users/login", func(c *goish.Context) {
-			c.JSON(http.StatusOK, goish.H{
+		v1.POST("/users/login", func(c *easyrest.Context) {
+			c.JSON(http.StatusOK, easyrest.H{
 				"username": c.PostForm("username"),
 				"password": c.PostForm("password"),
 			})

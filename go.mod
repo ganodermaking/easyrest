@@ -1,3 +1,3 @@
-module github.com/ganodermaking/goish
+module github.com/ganodermaking/easyrest
 
 go 1.14

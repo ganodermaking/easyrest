@@ -1,4 +1,4 @@
-package goish
+package easyrest
 
 import (
 	"io"
@@ -19,7 +19,7 @@ const (
 	testCode
 )
 
-var goishMode = debugCode
+var easyrestMode = debugCode
 var modeName = DebugMode
 
 // DefaultWriter ...
@@ -29,13 +29,13 @@ var DefaultWriter io.Writer = os.Stdout
 func SetMode(value string) {
 	switch value {
 	case DebugMode, "":
-		goishMode = debugCode
+		easyrestMode = debugCode
 	case ReleaseMode:
-		goishMode = releaseCode
+		easyrestMode = releaseCode
 	case TestMode:
-		goishMode = testCode
+		easyrestMode = testCode
 	default:
-		panic("goish mode unknown: " + value)
+		panic("mode unknown: " + value)
 	}
 	if value == "" {
 		value = DebugMode

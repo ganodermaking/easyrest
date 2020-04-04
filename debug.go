@@ -1,4 +1,4 @@
-package goish
+package easyrest
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 func isDebugging() bool {
-	return goishMode == debugCode
+	return easyrestMode == debugCode
 }
 
 func debugPrint(format string, values ...interface{}) {
@@ -14,7 +14,7 @@ func debugPrint(format string, values ...interface{}) {
 		if !strings.HasSuffix(format, "\n") {
 			format += "\n"
 		}
-		fmt.Fprintf(DefaultWriter, "[GOISH-debug] "+format, values...)
+		fmt.Fprintf(DefaultWriter, "[EASYREST-debug] "+format, values...)
 	}
 }
 

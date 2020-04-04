@@ -1,4 +1,4 @@
-package goish
+package easyrest
 
 import (
 	"net/http"
