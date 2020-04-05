@@ -2,6 +2,11 @@
 a easy restful framework
 
 # install
+```shell
+go get -u github.com/ganodermaking/easyrest
+```
+
+# use
 ```go
 func main() {
 	r := easyrest.New()
